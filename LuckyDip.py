@@ -16,7 +16,7 @@ for y in range(len(array)-1,0,-1):
    if array[x]> array[x+1]:
        array[x],array[x+1]=array[x+1],array[x]
        
-# OR USE THE BELOW COMMAND SORT() ==>(array.sort()
+## OR USE THE BELOW COMMAND SORT() ==>(array.sort()
 # ==> array.sort()          
 
 # This part of the code Displays Random numbers in Ascending order
