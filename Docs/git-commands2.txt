@@ -1,0 +1,90 @@
+				### Absorbing git commands while learning  ###
+
+>> From Git HUB=============>
+…or create a new repository on the command line
+echo "# Mylab" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/gitlearn212/Mylab.git
+================================================================
+git push -u origin master
+…or push an existing repository from the command line
+================================================================
+git remote add origin https://github.com/gitlearn212/Mylab.git
+git push -u origin master
+>>=======================================================================================<<
+
+
+==> Get oneline graph 					: git log --all --decorate --oneline --graph
+==> create an alias for graph				: alias graph="git log --all --decorate --oneline --graph"
+==> show all branches including origin (remote)		: git branch -a
+==> Check Branch 					: git branch
+==> Create a local branch 				: git branch mario
+==> Push local branch "mario" to github			: git push origin "mario"
+==> Delete local branch					: git branch -d or -D "mario"
+==> Delete remote branch pushed to github (i.e mario)	: git push origin --delete "mario"
+==> Remove branch only from github but remain in local	: git push origin --delete "mario"
+==> Add more than one branch to remote (github)		: git push origin "sonic" "mario"
+==> Remove more than one branch from remote (github)	: git push origin "sonic" "mario"
+
+==
+==> When removing from comitted 			: git rm --cached <filename> then commit
+==> To remove directories, 				: run git clean -f -d or git clean -fd
+==> To remove ignored files, 				: run git clean -f -X or git clean -fX
+==> To remove ignored and non-ignored files, 		: run git clean -f -x or git clean -fx
+							: git clean -f
+== > See which file to delete 				: git clean -n
+
+
+
+>>>=====================Projact======================<<<<
+>>>>>>>>>==========preperation==>>>>>>>>
+Install git for windows
+Select a folder Rigt click the folder and select git bashe
+git clone https://github.com/gitlearn212/Mylab.git
+
+Part 1)
+>>>>>>>====Exercise==========>>>>>>>>>>>>>>>>>
+1 create a file in local git repo
+2 index (stage ) and commit the file 
+3 Push to github
+4 check the result in github ( File is listed in github )
+5 git log show one inital commit
+6 git status shows all files up to date
+Part 2)
+>>>>>>======Remove the file from github
+1 From git bashe (local)
+2 git rm --cache <filename>
+3 git status >> Displays one deleted file (green) and same file as untracked (red)
+4 git commit for the deleted file (to delete the file from the commit)
+5 git status ==> shows the untracked file 
+6 git clean -df <filename> delete the file from the working directory (d= directory f = file)
+7 git status branch is  head of origin/master
+8 git push
+9 check the file is deleted from github too.
+
+Part 3 >>>>>>>>>=== REset the first commit=====>
+1 git log
+2 select the hash of the first commit(copy the first 7 char of the hash)
+3 git reset paste the copied hash and press enter
+4 git status (filename> in red untracked add/rm to update and checkout to discard chages
+5 git checkout  <filename> Retrives the file to working directory enything else will delete the file
+6 Now you are in the first commit any commits after this are lot.
+7 Create a branch from here (sonic)
+8 checkout to the new branch
+9 midify the file
+10 checkout to master
+11 merge sonic
+12 git push 
+13 check github the file is added.
+
+==END==
+
+=========Revert commits==========
+
+
+
+
+
+

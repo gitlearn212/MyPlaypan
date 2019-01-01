@@ -1,0 +1,26 @@
+				### Absorbing git commands while learning  ###
+
+==> Get oneline graph 					: git log --all --decorate --oneline --graph
+==> create an alias for graph				: alias graph="git log --all --decorate --oneline --graph"
+==> show all branches including origin (remote)		: git branch -a
+==> Check Branch 					: git branch
+==> Create a local branch 				: git branch mario
+==> Push local branch "mario" to github			: git push origin "mario"
+==> Delete local branch					: git branch -d or -D "mario"
+==> Delete remote branch pushed to github (i.e mario)	: git push origin --delete "mario"
+==> Remove branch only from github but remain in local	: git push origin --delete "mario"
+==> Add more than one branch to remote (github)		: git push origin "sonic" "mario"
+==> Remove more than one branch from remote (github)	: git push origin "sonic" "mario"
+
+==
+==> When removing from comitted 			: git rm --cached <filename> then commit
+==> To remove directories, 				: run git clean -f -d or git clean -fd
+==> To remove ignored files, 				: run git clean -f -X or git clean -fX
+==> To remove ignored and non-ignored files, 		: run git clean -f -x or git clean -fx
+							: git clean -f
+== > See which file to delete 				: git clean -n
+
+Deleting a file from folder and updating to github	: rm first.txt then git status (deleted first.txt in red)
+							: git add first.txt then git status (deleted first.txt in green)
+							: git commit -m " deleted first.txt" the git status (Working Dir is clean)
+							: git push -u origin master
